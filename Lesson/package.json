@@ -2,9 +2,12 @@
   "name": "lesson",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "watch:server": "nodemon'./src/app.ts' --watch './src'"
+    "start": "rimraf dist && tsc-watch --onSuccess",
+    "watch:server": "nodemon './src/app.ts' --watch './src'",
+    "start:dev": "nodemon app.ts",
+    "build": "rimraf dist tsc --watch"
   },
   "author": "",
   "license": "ISC",
